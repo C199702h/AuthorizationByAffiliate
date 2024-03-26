@@ -1,0 +1,22 @@
+/* pages/apply/promise.wxss */
+.title{
+	margin: 10px auto;
+	justify-content: center;
+	display: flex;
+    font-size:20px;
+	font-weight:bold;
+}
+.title2{
+	margin: 10px auto;
+	justify-content: center;
+	display: flex;
+    font-size:20px;
+}
+
+.bold{
+    font-weight:bold;
+}
+
+.pa{
+    margin-top: 10px;
+}

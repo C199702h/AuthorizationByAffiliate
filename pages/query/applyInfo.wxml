@@ -1,0 +1,42 @@
+<import src="../template/loading.wxml" />
+<template is="loading" data="{{showLoading}}" />
+
+<view class="view-default">
+  <view class="ui-list">
+  <view class="ui-authtip">
+      <text>贷款申请信息：</text>
+  </view>
+    <view class="ui-item">
+      <text class="input-label">借款人名称: </text>
+      <text class="item-content">{{borrowerName}}</text>
+    </view>
+    <view class="ui-item">
+      <text class="input-label">身份证号: </text>
+      <text class="item-content">{{idNo}}</text>
+    </view>
+    <view class="ui-item">
+      <text class="input-label">申请金额: </text>
+      <text class="item-content">{{applyAmount}}元</text>
+    </view>
+    <view class="ui-item">
+      <text class="input-label">申请期限: </text>
+      <text class="item-content">{{term}}月</text>
+    </view>
+<view class="radio-box" >  
+<radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{radios}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+</radio-group>
+</view>
+<view>
+<label style="font-size:13px;">
+        我已仔细阅读并同意
+        <text style="color:#FF8401" bindtap="bindGotoRight">《作为共同借款人和连带责任负责保证人的权利义务》</text>中的内容。
+      </label>
+      </view>
+    <view class="ui-button-content">
+    <button class="button" disabled="{{!Checked}}" bindtap="coBorrowerInfoInput">下一步</button>
+  </view>
+</view>
+</view>

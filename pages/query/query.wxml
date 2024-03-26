@@ -1,0 +1,34 @@
+<import src="../template/loading.wxml" />
+<template is="loading" data="{{showLoading}}" />
+
+<view class="view-default">
+  <view class="ui-list">
+  
+      <view class="ui-item">
+      <text class="input-label">申请编号: </text>
+      <input class="item-input" type="text" placeholder="请输入您的申请编号" maxlength='16' value="{{applyId}}" bindinput="applyIdInput"  />
+      </view>
+ <view class="ui-item">
+      <text class="input-label">管户客户经理工号: </text>
+      <input class="item-input" type="number" maxlength="11" placeholder="请输入您的客户经理工号" maxlength='6' value="{{CifManager}}" bindinput="CifManagerInput" bindblur="bindblur_CifManager" />
+    </view>
+ <view class="ui-item">
+      <text class="input-label">手机号码: </text>
+      <input class="item-input" type="number" maxlength="11" placeholder="请输入您的手机号码" value="{{MobilePhoneNo}}" bindinput="Phoneinput" bindblur="bindblur_MoiblePhone" />
+    </view>
+    <view class="ui-item">
+      <text class="input-label">图形验证码: </text>
+      <input class="item-input" style="width:80px;" type="text" placeholder="验证码" value="{{_vTokenName}}" maxlength="4" bindinput="VTokenInput" bindblur="bindblur_VToken" />
+      <image style="width:68px;height:35px;margin:auto auto;" bindtap="refreshImgToken" src="{{ImgSrc}}"></image>
+      <img src="{{ImgSrc}}" />
+    </view>
+    <view class="ui-item">
+      <text class="input-label">短信验证码: </text>
+      <input class="item-input" style="width:160rpx;" type="number" placeholder="短信验证码" maxlength="6" value="{{SmsPassword}}" bindinput="SMSinput" bindblur="bindblur_SMS" />
+      <button type="default" bindtap="getSMS" style="margin:auto auto;line-height:36px;font-size:13px;" loading="{{SmsBtnLoading}}" disabled="{{SmsBtnDisabled}}">{{SMSButtonText}}</button>
+    </view>
+    <view class="ui-button-content">
+        <button class="button" bindtap="queryLoanInfo" disabled="{{NextDisabled}}">下一步</button>
+    </view>
+</view>
+</view>

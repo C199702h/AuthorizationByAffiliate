@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/query/query",
+    "pages/query/right",
+    "pages/query/applyInfo",
+    "pages/apply/apply",
+    "pages/apply/promise",
+    "pages/apply/takePic",
+    "pages/result/result",
+    "pages/apply/taxauth"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "贷款关联人授权",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

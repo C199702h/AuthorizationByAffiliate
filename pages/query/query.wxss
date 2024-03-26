@@ -1,0 +1,16 @@
+.ui-tips {
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 22px;
+  font-size: 13px;
+  color: #aaa;
+
+}
+.ui-authtip {
+  padding-top: 7px;
+  padding-bottom: 3px;
+  padding-left: 22px;
+  font-size: 15px;
+  color: #aaa;
+
+}

@@ -1,0 +1,33 @@
+<!--pages/apply/takePic.wxml-->
+<import src="../template/loading.wxml" />
+<template is="loading" data="{{showLoading}}" />
+<view class="view-default">
+    <view style="font-size:13px;margin-top:20px;">
+        <view class="camera-block" bindtap="takePic1">
+            <image class="{{imgClass1}}" src="{{picSrc1}}"></image>
+            <text wx:if="{{textShow1}}">点击拍摄身份证正面（姓名、身份证号一面）</text>
+            
+        </view>
+
+        <view class="camera-block" bindtap="takePic2">
+            <image class="{{imgClass2}}" src="{{picSrc2}}"></image>
+            <view></view>
+            <text wx:if="{{textShow2}}">点击拍摄身份证反面（签证机关、有效期一面）</text>
+        </view>
+
+        <view class="camera-block" bindtap="takePic3">
+            <image class="{{imgClass3}}" src="{{picSrc3}}"></image>
+            <view></view>
+            <text wx:if="{{textShow3}}">点击拍摄本人照片（肩部以上人脸照）</text>
+        </view>
+        <!--
+        <view style="width:200px;margin:auto auto;display:flex;flex-direction:column;text-align:center;color:#508cee;">
+          <text style="font-size:12px">拍摄时可以切换为前置摄像头</text>
+        </view>
+        -->
+    </view>
+    
+    <view class="ui-button-content">
+        <button class="button" disabled="{{btnDisabled}}" loading="{{btnDisabled}}" bindtap="doIt">提交信息</button>
+    </view>
+</view>

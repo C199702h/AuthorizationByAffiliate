@@ -1,0 +1,12 @@
+/* pages/apply/taxauth.wxss */
+.title{
+	margin: 10px auto;
+	justify-content: center;
+	display: flex;
+    font-size:20px;
+	font-weight:bold;
+}
+
+.pa{
+    margin-top: 10px;
+}

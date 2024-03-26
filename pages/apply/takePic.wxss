@@ -1,0 +1,22 @@
+/* pages/apply/takePic.wxss */
+.camera-block{
+    width:186px;
+    height:140px;
+    flex-direction: column;
+    text-align:center;
+    border:dashed 1px #AEAEAE;
+    margin:auto auto 20px auto;
+    display:flex;
+    padding:10px;
+}
+.camera-img{
+    width:100px;
+    height:80px;
+    margin:auto auto;
+}
+
+.camera-img-after{
+    width:100%;
+    height:100%;
+    margin:auto auto;
+}

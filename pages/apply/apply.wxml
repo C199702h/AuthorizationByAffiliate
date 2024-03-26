@@ -1,0 +1,56 @@
+<!--pages/apply/apply.wxml-->
+
+<import src="../template/loading.wxml" />
+<template is="loading" data="{{showLoading}}" />
+
+<view class="view-default">
+  <view class="ui-list">
+   
+    
+    <view class="flexImg-block" >
+      <view class="camera-block" bindtap="takePic1">
+        <image class="{{imgClass1}}" src="{{picSrc1}}"></image>
+        <text class="camera-text" wx:if="{{textShow1}}">点击拍摄身份证正面（姓名、身份证号一面）</text>
+      </view>
+      <view class="camera-block" bindtap="takePic2">
+          <image class="{{imgClass2}}" src="{{picSrc2}}"></image>
+          <view></view>
+          <text class="camera-text" wx:if="{{textShow2}}">点击拍摄身份证反面（签证机关、有效期一面）</text>
+      </view>
+    </view>
+    <canvas style="width:600px;height:600px;position:fixed;top:-1200px" canvas-id="myCanvas"></canvas>
+    <canvas style="width:600px;height:600px;position:fixed;top:-600px" canvas-id="myCanvas2"></canvas>
+    <view class="ui-item">
+      <text class="input-label">姓名: </text>
+      <input class="item-input" type="text"  placeholder="上传照片自动识别" disabled='true' value="{{ClientName}}" bindinput="inputName" />
+    </view>
+
+    <view class="ui-item">
+      <text class="input-label">身份证号码: </text>
+      <input class="item-input" type="text"  placeholder="上传照片自动识别" disabled='true' value="{{IdNo}}" bindinput="inputIdNo" bindblur="bindblur_IdNo" />
+    </view>
+
+    <view class="ui-item">
+      <text class="input-label">身份证到期日: </text>
+      <input class="item-input" type="text" placeholder="上传照片自动识别"  disabled='true' value="{{ValidDate}}" bindinput="inputValidDate"/>
+    </view>
+    </view>
+
+<view style="text-align:center;">
+    <checkbox-group name="checkbox" bindchange="bindChangeCheck">
+      <checkbox value="checkbox1" checked="{{Checked}}"/>
+      <label style="font-size:13px;">
+        我已仔细阅读并同意
+        <text style="color:#FF8401" bindtap="bindGotoPromise">《个人征信授权及承诺书》</text>、<text style="color:#FF8401" bindtap="bindGotoTaxAuth">《纳税数据查询授权书》</text>中的内容。
+      </label>
+    </checkbox-group>
+  </view>
+
+
+    <view class="ui-button-content">
+        <button class="button" bindtap="authClient" disabled="{{NextDisabled}}">下一步</button>   
+  <!--      <button class="button" bindtap="submitLoan" disabled="{{NextDisabled}}">下一步</button>-->
+    </view>
+
+    
+</view>

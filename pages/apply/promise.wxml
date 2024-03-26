@@ -1,0 +1,90 @@
+<!--pages/apply/promise.wxml-->
+<view style="padding:20px;font-size:16px;line-height:22px;">
+  <view class="title">个人征信授权书</view>
+  <view style="font-size:18px;" class="bold">深圳农村商业银行股份有限公司 （以下简称“贵行”）:</view>
+
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;一、</text> 本人<text style="border-bottom: 1px solid #000;height: auto;width:auto;display: inline-block;">{{userName}}</text>同意并授权：
+    <text class="bold">贵行按照国家相关规定采集并向中国人民银行征信中心金融信用信息基础数据库以及其他依法设立的征信机构提供本人个人信息和包括信贷信息在内的信用信息，包含但不限于本人因未及时履行合同义务产生的不良信息。</text>
+  </view>
+
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;二、</text> 本人同意并授权：
+    <text class="bold">贵行根据国家相关规定，在办理涉及本人的业务时，有权通过中国人民银行征信中心金融信用信息基础数据库以及其他依法设立的征信机构以查询、打印、校验、审核、保存等方式使用符合规定的本人信用报告、个人信息和包括信贷信息在内的信用信息（如个人基本信息、信用交易、社保等相关信息），并用于以下用途：（请在对应的授权用途前打√，非授权用途打×）</text>
+    <view>
+      <text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;■</text>1、审核本人授信业务申请，用于授信前调查、审查审批、放款、贷后管理。
+		</view>			
+    <view>
+      <text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>2、审核本人为他人（含自然人、法人、其他组织）提供担保，用于授信前调查、审查审批、放款、贷后管理。
+    </view>      
+    <view>
+      <text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>3、审核本人担任法定代表人、负责人或者出资人的法人或其他组织（或该法人、其他组织作为担保人）的授信业务申请，用于授信前调查、审查审批、放款、贷后管理。
+    </view>        
+    <view>
+      <text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>4、本人向贵行提出信息异议，用于处理异议核查。
+    </view>  
+    <view>
+      <text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>5、本人的配偶向贵行申请授信业务或为他人（含自然人、法人、其他组织）提供担保时，用于授信前调查、审查审批、放款、贷后管理过程中的资信审查。
+    </view> 
+    <view>
+      <text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>6、用于<text style="border-bottom: 1px solid #000;width: 70px;display: inline-block;"></text>业务。
+    </view> 
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;三、</text> 本人同意并授权：
+    <text class="bold">贵行根据国家相关规定，在办理涉及本人的住房按揭业务时，有权通过深圳市房地产信息平台查询个人婚姻状况，用于审核本人授信业务申请，包括授信前调查、审查审批、放款。</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}" >&emsp;&emsp;四、处理的个人信息种类：<text style="font-size: 16px;" wx:if="{{!ffixed}}">■</text><text style="font-size: 16px;" decode="{{true}}" wx:if="{{ffixed}}">□</text>敏感信息   <text style="font-size: 16px;" decode="{{true}}" wx:if="{{ffixed}}">■</text><text style="font-size: 16px;" decode="{{true}}" wx:if="{{!ffixed}}">□</text>非敏感信息</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;本人已知悉贵行采集本人的个人敏感信息是实现本授权书载明的授权用途所必须的行为，且不会对本人个人权益产生不利影响。（“敏感个人信息”包括生物识别、宗教信仰、特定身份、医疗健康、金融账户、行踪轨迹等信息，以及不满十四周岁未成年人的个人信息）。</text>
+  </view>
+
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;五、若贵行未经本人授权或超出上述业务范围对本人征信报告及婚姻信息进行查询和使用，由此引发的一切后果及法律责任由贵行承担。</text>
+  </view>
+
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;六、若相关业务未获批准办理，本人同意本授权书及本人信用报告等资料由贵行留存，无需退还。</text>
+  </view>
+
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;七、本授权书有效期自签署之日起至本人约定用途的业务结清日或业务被否决日止。</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;八、处理不满十四周岁未成年人个人信息的，应当取得未成年人的父母或者其他监护人的同意。</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;授权人声明：贵行已依法向本人提示了相关条款，应本人的要求对上述条款作出相应的说明，本人已经完全知悉并理解本授权书条款的内容及相关的法律后果，并愿意接受本授权书条款的约定。</text>
+  </view>
+
+  <view class="pa">
+    <text class="bold" decode="{{true}}">&emsp;&emsp;深圳农村商业银行股份有限公司客服电话：961200（深圳），4001961200（全国）。</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">授权人/监护人（签名）：{{userName}}</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">曾用名（签字）：</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">授权人证件名称：</text><text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>居民身份证<text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>其他<text style="border-bottom: 1px solid #000;width: 90px;display: inline-block;"></text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">授权人证件号码：{{certNo}}\n</text>
+  </view>
+  <view class="pa">
+    <text class="bold" decode="{{true}}">监护人证件名称：</text><text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>居民身份证<text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;□</text>其他<text style="border-bottom: 1px solid #000;width: 90px;display: inline-block;"></text>
+  </view>
+  
+  <view class="pa">
+    <text class="bold" decode="{{true}}">监护人证件号码：</text><text style="font-size: 16px;" decode="{{true}}">&emsp;&emsp;</text>与被查人关系<text style="border-bottom: 1px solid #000;width: 40px;display: inline-block;"></text>
+  </view>
+  <view class="pa"  style="float: right;">
+    <text class="bold" decode="{{true}}">20__年__月__日</text>
+  </view>
+
+  <button class="button" bindtap="bindClose">关闭</button>
+
+</view>

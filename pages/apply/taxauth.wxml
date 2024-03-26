@@ -1,0 +1,16 @@
+<!--pages/apply/taxauth.wxml-->
+<view style="padding:20px;font-size:16px;line-height:22px;">
+    <view class="title">纳税数据查询授权书</view>
+    <view style="font-weight:bold;">深圳农村商业银行股份有限公司、深圳市税务局:</view>
+
+    <view class="pa">
+    　　一、本人同意并授权，深圳市税务局在本人未开通电子税务局的情况下，使用本人的身份信息（姓名、手机号、证件号码等）办理电子税务局开通业务。
+    </view>
+
+    <view class="pa">
+    　　二、本人同意并授权，深圳农村商业银行股份有限公司有权基于个人授信或贷款业务向深圳税务局提供本人的身份信息（包括但不限于本人姓名、手机号、证件号码等），并向深圳市税务局查询本人的个人完税数据，授权期限为本授权书签署之日起一个月；如授信或发放贷款成功后，则授权期自动延长至授信或最后一笔贷款期限到期为止。
+    </view>
+
+    <button class="button" bindtap="bindClose">关闭</button>
+
+</view>

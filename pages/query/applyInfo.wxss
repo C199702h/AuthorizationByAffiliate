@@ -1,0 +1,51 @@
+/* pages/query/applyInfo.wxss */
+.ui-tips {
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 22px;
+  font-size: 13px;
+  color: #aaa;
+
+}
+.ui-authtip {
+  padding-top: 7px;
+  padding-bottom: 3px;
+  padding-left: 22px;
+  font-size: 15px;
+  color: #aaa;
+
+}
+
+.radio-box{
+  display: inline-block;
+  position: relative;
+  left:20px;
+  height: 15px;
+  line-height: 15px;
+  margin-right: 0px;
+  font-size: 26rpx;
+}
+.input-radio {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  left: 0px;
+  outline: none;
+  -webkit-appearance: none;
+}
+.radio {
+  display: inline-block;
+  height: 25px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+.on{
+    background: wheat
+}
+lebel image{
+    width: 15px;
+    height: 15px;
+}
